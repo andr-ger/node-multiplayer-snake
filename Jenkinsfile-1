@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'Ubuntu-App-Server' }
+  agent { label 'build-in' }
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
