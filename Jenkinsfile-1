@@ -6,12 +6,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t andrger/snake:latest .'
+        sh 'docker build -t andrger/snake .'
       }
     }
     stage('Scan') {
       steps {
-        sh 'trivy image snake:latest'
+        sh 'trivy andrger/snake'
       }
     }
   }
