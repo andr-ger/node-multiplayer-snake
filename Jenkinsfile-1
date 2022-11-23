@@ -13,8 +13,9 @@ pipeline {
       steps {
         sh """
           echo 1111
-          echo $PATH
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/master/contrib/install.sh | sh -s -- -b /usr/local/bin
           whereis trivy
+          trivy --version
           trivy image andrger/snake:latest
         """
       }
