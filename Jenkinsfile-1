@@ -11,7 +11,6 @@ pipeline {
     }
     stage('Scan') {
       steps {
-        # curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/master/contrib/install.sh | sh -s -- -b /usr/local/bin
         sh """
           echo 111
           whereis trivy
