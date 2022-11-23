@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Scan') {
       steps {
-        sh 'trivy --exit-code 1 --severity HIGH,CRITICAL andrger/snake:latest'
+        sh 'trivy --severity HIGH,CRITICAL andrger/snake:latest'
       }
     }
   }
