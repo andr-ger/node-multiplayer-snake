@@ -11,7 +11,12 @@ pipeline {
     }
     stage('Scan') {
       steps {
-        sh 'trivy image andrger/snake:latest'
+        sh """
+          echo 1111
+          echo $PATH
+          whereis trivy
+          trivy image andrger/snake:latest
+        """
       }
     }
   }
