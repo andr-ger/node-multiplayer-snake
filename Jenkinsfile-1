@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Scan') {
       steps {
-        sh "trivy image andrger/snake:latest"
+        sh "trivy image andrger/snake"
       }
     }
   }
