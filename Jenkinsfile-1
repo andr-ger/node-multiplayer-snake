@@ -13,6 +13,7 @@ pipeline {
       steps {
         sh """
           echo 111
+          ls /usr/local/bin
           whereis trivy
           trivy --version
           trivy image andrger/snake:latest
